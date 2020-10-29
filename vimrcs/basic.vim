@@ -51,6 +51,9 @@ nmap <leader>w :w!<cr>
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
 
+set tags=tags;/
+map <leader>y "+yy
+map <leader>p "+p
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -173,14 +176,14 @@ set noswapfile
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
-set expandtab
+"set expandtab
 
 " Be smart when using tabs ;)
-set smarttab
+"set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+"set shiftwidth=4
+"set tabstop=4
 
 " Linebreak on 500 characters
 set lbr
@@ -230,7 +233,8 @@ map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove 
-map <leader>t<leader> :tabnext 
+map <leader>ty :tabnext 
+map <leader>tr :tabprevious 
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
